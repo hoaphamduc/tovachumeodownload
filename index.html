@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tớ và chú mèo</title>
+    <link rel="icon" type="image/png" href="/meoiupit.jpg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main-div">
+        <img id="peach" src="peach.png">
+        <button id="download-button">Tải ở đây nè</button>
+    </div>
+
+    <script>
+        document.getElementById('download-button').addEventListener('click', function() {
+            var confirmDownload = confirm("Có yêu chồng không mà tải?");
+            if (confirmDownload) {
+                var apkUrl = 'meoiupit.apk';
+                var a = document.createElement('a');
+                a.href = apkUrl;
+                a.download = 'meoiupit.apk';
+                document.body.appendChild(a);
+                a.click();
+                a.remove();
+            }
+        });
+    </script>
+</body>
+</html>
